@@ -23,7 +23,6 @@ interface Product {
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const [hideDisregarded, setHideDisregarded] = useState(true);
   const [collapsedCycles, setCollapsedCycles] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
@@ -160,8 +159,7 @@ export default function Home() {
     }
   };
 
-  const filteredProducts = products.filter(p => !hideDisregarded || p.owned !== "Don't care");
-  const cycles = Array.from(new Set(filteredProducts.map(p => p.cycle))).sort((a, b) => {
+  const cycles = Array.from(new Set(products.map(p => p.cycle))).sort((a, b) => {
     const bottomCycles = ['Standalones', 'Investigator Starter Decks'];
     if (bottomCycles.includes(a) && !bottomCycles.includes(b)) return 1;
     if (!bottomCycles.includes(a) && bottomCycles.includes(b)) return -1;
@@ -179,16 +177,6 @@ export default function Home() {
             <h1 className="text-4xl font-typewriter font-bold text-slate-100 tracking-tight uppercase">
               Investigation Archive: Arkham TCG
             </h1>
-            <button
-              onClick={() => setHideDisregarded(!hideDisregarded)}
-              className={`px-4 py-2 text-[10px] font-typewriter font-bold uppercase tracking-widest border transition-all ${
-                hideDisregarded 
-                  ? 'bg-amber-900/20 border-amber-700 text-amber-400 shadow-[0_0_15px_rgba(180,83,9,0.1)]' 
-                  : 'bg-black/40 border-eldritch text-slate-500 hover:border-slate-700 hover:text-slate-400'
-              }`}
-            >
-              {hideDisregarded ? 'Showing Active Records' : 'Hide Disregarded'}
-            </button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-slate-900/60 p-5 rounded-sm border border-eldritch shadow-lg relative overflow-hidden group">
@@ -228,11 +216,29 @@ export default function Home() {
 
         <div className="space-y-16 pb-32">
           {cycles.map(cycle => {
-            const cycleProducts = filteredProducts.filter(p => p.cycle === cycle);
+            const cycleProducts = products.filter(p => p.cycle === cycle);
             const allScenarios = cycleProducts.flatMap(p => p.scenarios || []);
-            const hasScenarios = allScenarios.length > 0;
-            const allPlayed = hasScenarios && allScenarios.every(s => s.played);
+            const caredScenarios = allScenarios.filter((_, idx) => {
+               const p = cycleProducts.find(prod => prod.scenarios?.includes(allScenarios[idx]));
+               return p && p.owned !== "Don't care";
+            });
+            const allPlayed = caredScenarios.length > 0 && caredScenarios.every(s => s.played);
             const isCollapsed = collapsedCycles[cycle];
+
+            // Grouping Logic
+            const investigatorExpansions = cycleProducts.filter(p => p.type === 'Investigator Expansion');
+            const campaignExpansions = cycleProducts.filter(p => p.type === 'Campaign Expansion');
+            const legacyProducts = cycleProducts.filter(p => p.type === 'Deluxe' || p.type === 'Mythos Pack');
+            const otherProducts = cycleProducts.filter(p => !['Investigator Expansion', 'Campaign Expansion', 'Deluxe', 'Mythos Pack'].includes(p.type));
+
+            const showLegacyAsSubItems = (campaignExpansions.length > 0 || investigatorExpansions.length > 0) && legacyProducts.length > 0;
+            const attachLegacyToId = campaignExpansions[0]?.id || investigatorExpansions[0]?.id;
+
+            const renderProducts: Product[] = [];
+            investigatorExpansions.forEach(p => renderProducts.push(p));
+            campaignExpansions.forEach(p => renderProducts.push(p));
+            if (!showLegacyAsSubItems) legacyProducts.forEach(p => renderProducts.push(p));
+            otherProducts.forEach(p => renderProducts.push(p));
 
             return (
               <section key={cycle} className="scroll-mt-48 relative">
@@ -282,7 +288,7 @@ export default function Home() {
                 
                 {!isCollapsed && (
                   <div className="grid gap-4 animate-in fade-in slide-in-from-top-4 duration-500">
-                    {cycleProducts.map(product => (
+                    {renderProducts.map(product => (
                       <div 
                         key={product.id} 
                         className={`flex flex-col p-5 border relative transition-all duration-300 ${
@@ -375,6 +381,44 @@ export default function Home() {
                                     )}
                                   </div>
                                   <span className="text-xs font-serif tracking-wide">{scenario.name}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {showLegacyAsSubItems && product.id === attachLegacyToId && (
+                          <div className="mt-6 pt-6 border-t border-eldritch/30">
+                            <label className="text-[9px] font-typewriter uppercase font-bold text-slate-600 mb-3 block tracking-[0.2em]">Legacy Releases Tracking</label>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+                              {legacyProducts.map(lp => (
+                                <div key={lp.id} className={`flex items-center justify-between p-3 rounded-sm border transition-all ${
+                                  lp.owned === 'Owned' || lp.owned === 'Preordered'
+                                    ? 'bg-blue-900/10 border-blue-900/30 shadow-inner' 
+                                    : 'bg-black/20 border-eldritch/50'
+                                }`}>
+                                  <div className="flex flex-col gap-1 pr-2">
+                                    <div className="flex items-center gap-2">
+                                      <span className="px-1.5 py-0.5 bg-black/60 border border-slate-700 text-[9px] font-mono text-slate-500 rounded-sm">
+                                        {lp.id}
+                                      </span>
+                                      <span className="text-xs font-serif text-slate-300 leading-tight">{lp.title}</span>
+                                    </div>
+                                    <span className="text-[9px] text-slate-500 font-typewriter uppercase tracking-tighter italic">{lp.type}</span>
+                                  </div>
+                                  <select 
+                                    value={lp.owned}
+                                    onChange={(e) => updateProduct(lp.id, { owned: e.target.value as Product['owned'] })}
+                                    className={`text-[10px] font-typewriter font-bold bg-slate-900 border rounded text-slate-400 px-2 py-1.5 outline-none transition-colors cursor-pointer ${
+                                      lp.owned === 'Owned' ? 'border-blue-700/50 text-blue-400' : 'border-slate-700 hover:border-slate-500'
+                                    }`}
+                                  >
+                                    <option value="">Unrecorded</option>
+                                    <option value="Owned">Owned</option>
+                                    <option value="Preordered">En Route</option>
+                                    <option value="Want">Target</option>
+                                    <option value="Don't care">Disregarded</option>
+                                  </select>
                                 </div>
                               ))}
                             </div>
