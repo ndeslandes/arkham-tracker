@@ -9,6 +9,7 @@ interface Product {
   type: string;
   owned: 'Owned' | "Don't care" | 'Want' | 'Preordered' | '';
   played: 'Played' | 'No' | '';
+  scenarioCount: number;
   comments?: string;
   url?: string;
 }
@@ -69,7 +70,8 @@ export default function Home() {
   const cycles = Array.from(new Set(products.map(p => p.cycle)));
 
   const totalOwned = products.filter(p => p.owned === 'Owned' || p.owned === 'Preordered').length;
-  const totalPlayed = products.filter(p => p.played === 'Played').length;
+  const totalPlayedScenarios = products.reduce((acc, p) => p.played === 'Played' ? acc + p.scenarioCount : acc, 0);
+  const totalPossibleScenarios = products.reduce((acc, p) => acc + p.scenarioCount, 0);
   const totalItems = products.length;
 
   return (
@@ -98,17 +100,17 @@ export default function Home() {
             </div>
             <div className="bg-slate-900/60 p-5 rounded-sm border border-eldritch shadow-lg relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-1 h-full bg-emerald-900/50 group-hover:bg-emerald-800 transition-colors"></div>
-              <p className="font-typewriter text-slate-500 text-xs uppercase font-bold tracking-widest mb-2">Mysteries Solved</p>
+              <p className="font-typewriter text-slate-500 text-xs uppercase font-bold tracking-widest mb-2">Scenarios Solved</p>
               <div className="flex items-end justify-between">
                 <p className="text-3xl font-typewriter font-bold text-emerald-500/80">
-                  {totalPlayed} <span className="text-slate-600 text-xl">/ {totalItems}</span>
+                  {totalPlayedScenarios} <span className="text-slate-600 text-xl">/ {totalPossibleScenarios}</span>
                 </p>
-                <p className="text-emerald-500/40 font-typewriter text-sm mb-1">{Math.round((totalPlayed / totalItems) * 100)}%</p>
+                <p className="text-emerald-500/40 font-typewriter text-sm mb-1">{totalPossibleScenarios > 0 ? Math.round((totalPlayedScenarios / totalPossibleScenarios) * 100) : 0}%</p>
               </div>
               <div className="mt-4 w-full bg-black/40 rounded-none h-1.5 border border-eldritch/30">
                 <div 
                   className="bg-emerald-900 h-full rounded-none transition-all duration-1000 shadow-[0_0_8px_rgba(6,78,59,0.5)]" 
-                  style={{ width: `${(totalPlayed / totalItems) * 100}%` }}
+                  style={{ width: `${totalPossibleScenarios > 0 ? (totalPlayedScenarios / totalPossibleScenarios) * 100 : 0}%` }}
                 ></div>
               </div>
             </div>
@@ -173,7 +175,7 @@ export default function Home() {
                         <label className="text-[9px] font-typewriter uppercase font-bold text-slate-600 mb-1.5 tracking-[0.2em]">Record Status</label>
                         <select 
                           value={product.owned} 
-                          onChange={(e) => updateProduct(product.id, { owned: e.target.value as any })}
+                          onChange={(e) => updateProduct(product.id, { owned: e.target.value as Product['owned'] })}
                           className={`text-xs font-typewriter font-bold rounded-sm px-3 py-2.5 outline-none border transition-all appearance-none cursor-pointer ${
                             product.owned === 'Owned' 
                               ? 'bg-blue-900/10 border-blue-900/40 text-blue-300/80 focus:border-blue-700' 

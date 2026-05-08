@@ -20,7 +20,7 @@ export async function POST(request: Request) {
     const data = await fs.readFile(DATA_PATH, 'utf-8');
     const products = JSON.parse(data);
 
-    const index = products.findIndex((p: any) => p.id === updatedProduct.id);
+    const index = products.findIndex((p: { id: string }) => p.id === updatedProduct.id);
     if (index > -1) {
       products[index] = { ...products[index], ...updatedProduct };
       await fs.writeFile(DATA_PATH, JSON.stringify(products, null, 2));
