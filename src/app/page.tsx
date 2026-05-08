@@ -380,7 +380,12 @@ export default function Home() {
                                   .filter(p => p.cycle === product.cycle)
                                   .flatMap(p => p.scenarios);
                                 const uniqueNames = Array.from(new Set(cycleScenarios.map(s => s.name)));
-                                const displayNum = uniqueNames.indexOf(scenario.name) + 1;
+                                
+                                // For standalones, numbering should reset per product. 
+                                // For campaigns, it stays cycle-wide (1-8+)
+                                const displayNum = product.cycle === 'Standalones' 
+                                  ? idx + 1 
+                                  : uniqueNames.indexOf(scenario.name) + 1;
 
                                 return (
                                   <div 
