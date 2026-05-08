@@ -1611,38 +1611,42 @@
     "played": "No",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/drowned-city-campaign-expansion/",
-    "scenarioCount": 8,
+    "scenarioCount": 9,
     "scenarios": [
       {
-        "name": "Scenario 1",
+        "name": "One Last Job",
         "played": false
       },
       {
-        "name": "Scenario 2",
+        "name": "The Western Wall",
         "played": false
       },
       {
-        "name": "Scenario 3",
+        "name": "The Drowned Quarter",
         "played": false
       },
       {
-        "name": "Scenario 4",
+        "name": "Obsidian Canyons",
         "played": false
       },
       {
-        "name": "Scenario 5",
+        "name": "Court of the Ancients",
         "played": false
       },
       {
-        "name": "Scenario 6",
+        "name": "The Apiary",
         "played": false
       },
       {
-        "name": "Scenario 7",
+        "name": "The Grand Vault",
         "played": false
       },
       {
-        "name": "Scenario 8",
+        "name": "Sepulchre of the Sleeper",
+        "played": false
+      },
+      {
+        "name": "The Doom of Arkham",
         "played": false
       }
     ]
