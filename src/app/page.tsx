@@ -161,7 +161,11 @@ export default function Home() {
   };
 
   const filteredProducts = products.filter(p => !hideDisregarded || p.owned !== "Don't care");
-  const cycles = Array.from(new Set(filteredProducts.map(p => p.cycle)));
+  const cycles = Array.from(new Set(filteredProducts.map(p => p.cycle))).sort((a, b) => {
+    if (a === 'Investigator Starter Decks') return 1;
+    if (b === 'Investigator Starter Decks') return -1;
+    return 0; // Maintain relative order for others
+  });
 
   return (
     <main className="min-h-screen bg-background text-foreground selection:bg-eldritch selection:text-white">
