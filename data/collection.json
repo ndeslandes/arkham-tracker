@@ -1125,7 +1125,7 @@
     "scenarios": [
       {
         "name": "Extracurricular Activity",
-        "played": false
+        "played": true
       },
       {
         "name": "The House Always Wins",
@@ -1837,4 +1837,4 @@
     "scenarioCount": 0,
     "scenarios": []
   }
-]
+]]
