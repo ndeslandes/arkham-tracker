@@ -1067,15 +1067,19 @@
     "scenarioCount": 8,
     "scenarios": [
       {
-        "name": "Ice and Death",
+        "name": "Ice and Death Part I",
         "played": false
       },
       {
-        "name": "The Barrier Peaks",
+        "name": "Ice and Death Part II",
         "played": false
       },
       {
-        "name": "City of the Elder Things",
+        "name": "Ice and Death Part III",
+        "played": false
+      },
+      {
+        "name": "Fatal Mirage",
         "played": false
       },
       {
@@ -1083,19 +1087,15 @@
         "played": false
       },
       {
-        "name": "The Heart of Madness",
+        "name": "City of the Elder Things",
         "played": false
       },
       {
-        "name": "Scenario 6",
+        "name": "The Heart of Madness Part I",
         "played": false
       },
       {
-        "name": "Scenario 7",
-        "played": false
-      },
-      {
-        "name": "Scenario 8",
+        "name": "The Heart of Madness Part II",
         "played": false
       }
     ]
@@ -1426,35 +1426,35 @@
     "scenarioCount": 8,
     "scenarios": [
       {
-        "name": "The First Day",
+        "name": "Written in Rock",
         "played": false
       },
       {
-        "name": "The First Night",
+        "name": "Hemlock House",
         "played": false
       },
       {
-        "name": "The Second Day",
+        "name": "The Silent Heath",
         "played": false
       },
       {
-        "name": "The Second Night",
+        "name": "The Lost Sister",
         "played": false
       },
       {
-        "name": "The Third Day",
+        "name": "The Thing in the Depths",
         "played": false
       },
       {
-        "name": "The Third Night",
+        "name": "The Twisted Hollow",
         "played": false
       },
       {
-        "name": "The Fate of Hemlock Vale",
+        "name": "The Longest Night",
         "played": false
       },
       {
-        "name": "Scenario 8",
+        "name": "Fate of the Vale",
         "played": false
       }
     ]
