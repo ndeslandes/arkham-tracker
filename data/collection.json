@@ -8,7 +8,21 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/arkham-horror-the-card-game-revised-core-set/",
-    "scenarioCount": 3
+    "scenarioCount": 3,
+    "scenarios": [
+      {
+        "name": "The Gathering",
+        "played": true
+      },
+      {
+        "name": "The Midnight Masks",
+        "played": true
+      },
+      {
+        "name": "The Devourer Below",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC02",
@@ -19,7 +33,17 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/dunwich-legacy-campaign-expansion/",
-    "scenarioCount": 2
+    "scenarioCount": 2,
+    "scenarios": [
+      {
+        "name": "Extracurricular Activity",
+        "played": true
+      },
+      {
+        "name": "The House Always Wins",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC03",
@@ -30,7 +54,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Miskatonic Museum",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC04",
@@ -41,7 +71,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Essex County Express",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC05",
@@ -52,7 +88,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Blood on the Altar",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC06",
@@ -63,7 +105,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Undimensioned and Unseen",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC07",
@@ -74,7 +122,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Where Doom Awaits",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC08",
@@ -85,7 +139,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Lost in Time and Space",
+        "played": true
+      }
+    ]
   },
   {
     "id": "uAHC09",
@@ -96,7 +156,13 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/curse-rougarou/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Curse of the Rougarou",
+        "played": true
+      }
+    ]
   },
   {
     "id": "uAHC10",
@@ -107,7 +173,13 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/carnevale-horrors/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Carnevale of Horrors",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC11",
@@ -118,7 +190,17 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/path-carcosa-campaign-expansion/",
-    "scenarioCount": 2
+    "scenarioCount": 2,
+    "scenarios": [
+      {
+        "name": "Curtain Call",
+        "played": true
+      },
+      {
+        "name": "The Last King",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC12",
@@ -129,7 +211,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Echoes of the Past",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC13",
@@ -140,7 +228,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Unspeakable Oath",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC14",
@@ -151,7 +245,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "A Phantom of Truth",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC15",
@@ -162,7 +262,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Pallid Mask",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC16",
@@ -173,7 +279,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Black Stars Rise",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC17",
@@ -184,7 +296,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Dim Carcosa",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC18",
@@ -195,7 +313,13 @@
     "played": "No",
     "comments": "multiplayer",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/labyrinths-lunacy/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Labyrinths of Lunacy",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC19",
@@ -206,7 +330,17 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/forgotten-age-campaign-expansion/",
-    "scenarioCount": 2
+    "scenarioCount": 2,
+    "scenarios": [
+      {
+        "name": "The Untamed Wilds",
+        "played": true
+      },
+      {
+        "name": "The Doom of Eztli",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC20",
@@ -217,7 +351,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Threads of Fate",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC21",
@@ -228,7 +368,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Boundary Beyond",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC22",
@@ -239,7 +385,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Heart of the Elders",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC23",
@@ -250,7 +402,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The City of Archives",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC24",
@@ -261,7 +419,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Depths of Yoth",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC25",
@@ -272,7 +436,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Shattered Aeons",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC26",
@@ -283,7 +453,8 @@
     "played": "No",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/return-night-zealot/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC27",
@@ -294,7 +465,13 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/guardians-abyss/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Guardians of the Abyss",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC28",
@@ -305,7 +482,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/return-dunwich-legacy/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC29",
@@ -316,7 +494,17 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/circle-undone-campaign-expansion/",
-    "scenarioCount": 2
+    "scenarioCount": 2,
+    "scenarios": [
+      {
+        "name": "The Witching Hour",
+        "played": true
+      },
+      {
+        "name": "At Death's Doorstep",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC30",
@@ -327,7 +515,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Secret Name",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC31",
@@ -338,7 +532,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Wages of Sin",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC32",
@@ -349,7 +549,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "For the Greater Good",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC33",
@@ -360,7 +566,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Union and Disillusion",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC34",
@@ -371,7 +583,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "In the Clutches of Chaos",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC35",
@@ -382,7 +600,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Before the Black Throne",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC36",
@@ -393,7 +617,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/return-path-carcosa/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC37",
@@ -404,7 +629,17 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/dream-eaters-campaign-expansion/",
-    "scenarioCount": 2
+    "scenarioCount": 2,
+    "scenarios": [
+      {
+        "name": "Beyond the Gates of Sleep",
+        "played": true
+      },
+      {
+        "name": "Waking Nightmare",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC38",
@@ -415,7 +650,13 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/murder-excelsior-hotel/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Murder at the Excelsior Hotel",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC39",
@@ -426,7 +667,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Search for Kadath",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC40",
@@ -437,7 +684,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "A Thousand Shapes of Horror",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC41",
@@ -448,7 +701,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Dark Side of the Moon",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC42",
@@ -459,7 +718,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Point of No Return",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC43",
@@ -470,7 +735,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Where the Gods Dwell",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC44",
@@ -481,7 +752,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Weaver of the Cosmos",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC45",
@@ -492,7 +769,13 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/blob-ate-everything/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Blob That Ate Everything",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC46",
@@ -503,7 +786,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/return-forgotten-age/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC47",
@@ -514,7 +798,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/nathaniel-cho-investigator-starter-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC48",
@@ -525,7 +810,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/harvey-walters-investigator-starter-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC49",
@@ -536,7 +822,8 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/winifred-habbamock-investigator-starter-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC50",
@@ -547,7 +834,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/jacqueline-fine-investigator-starter-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC51",
@@ -558,7 +846,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/stella-clark-investigator-starter-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC52",
@@ -569,7 +858,17 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/innsmouth-conspiracy-campaign-expansion/",
-    "scenarioCount": 2
+    "scenarioCount": 2,
+    "scenarios": [
+      {
+        "name": "The Pit of Despair",
+        "played": true
+      },
+      {
+        "name": "The Vanishing of Elina Harper",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC53",
@@ -580,7 +879,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "In Too Deep",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC54",
@@ -591,7 +896,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Devil Reef",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC55",
@@ -602,7 +913,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Horror in High Gear",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC56",
@@ -613,7 +930,13 @@
     "played": "Played",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "A Light in the Fog",
+        "played": true
+      }
+    ]
   },
   {
     "id": "AHC57",
@@ -624,7 +947,13 @@
     "played": "",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Lair of Dagon",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC58",
@@ -635,7 +964,13 @@
     "played": "",
     "comments": "",
     "url": "",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Into the Maelstrom",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC59",
@@ -646,7 +981,13 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/war-outer-gods/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "War of the Outer Gods",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC60",
@@ -657,7 +998,21 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/arkham-horror-the-card-game-revised-core-set/",
-    "scenarioCount": 3
+    "scenarioCount": 3,
+    "scenarios": [
+      {
+        "name": "The Gathering",
+        "played": false
+      },
+      {
+        "name": "The Midnight Masks",
+        "played": false
+      },
+      {
+        "name": "The Devourer Below",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC61",
@@ -668,7 +1023,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/return-circle-undone/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC62",
@@ -679,7 +1035,13 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/machinations-through-time/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Machinations Through Time",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC63",
@@ -690,7 +1052,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/edge-earth-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC64",
@@ -701,7 +1064,41 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/edge-earth-campaign-expansion/",
-    "scenarioCount": 8
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "Ice and Death",
+        "played": false
+      },
+      {
+        "name": "The Barrier Peaks",
+        "played": false
+      },
+      {
+        "name": "City of the Elder Things",
+        "played": false
+      },
+      {
+        "name": "To the Forbidden Peaks",
+        "played": false
+      },
+      {
+        "name": "The Heart of Madness",
+        "played": false
+      },
+      {
+        "name": "Scenario 6",
+        "played": false
+      },
+      {
+        "name": "Scenario 7",
+        "played": false
+      },
+      {
+        "name": "Scenario 8",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC65",
@@ -712,7 +1109,8 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/dunwich-legacy-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC66",
@@ -723,7 +1121,41 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/dunwich-legacy-campaign-expansion/",
-    "scenarioCount": 8
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "Extracurricular Activity",
+        "played": false
+      },
+      {
+        "name": "The House Always Wins",
+        "played": false
+      },
+      {
+        "name": "The Miskatonic Museum",
+        "played": false
+      },
+      {
+        "name": "The Essex County Express",
+        "played": false
+      },
+      {
+        "name": "Blood on the Altar",
+        "played": false
+      },
+      {
+        "name": "Undimensioned and Unseen",
+        "played": false
+      },
+      {
+        "name": "Where Doom Awaits",
+        "played": false
+      },
+      {
+        "name": "Lost in Time and Space",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC67",
@@ -734,7 +1166,8 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/path-carcosa-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC68",
@@ -745,7 +1178,41 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/path-carcosa-campaign-expansion/",
-    "scenarioCount": 8
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "Curtain Call",
+        "played": false
+      },
+      {
+        "name": "The Last King",
+        "played": false
+      },
+      {
+        "name": "Echoes of the Past",
+        "played": false
+      },
+      {
+        "name": "The Unspeakable Oath",
+        "played": false
+      },
+      {
+        "name": "A Phantom of Truth",
+        "played": false
+      },
+      {
+        "name": "The Pallid Mask",
+        "played": false
+      },
+      {
+        "name": "Black Stars Rise",
+        "played": false
+      },
+      {
+        "name": "Dim Carcosa",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC69",
@@ -756,7 +1223,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/scarlet-keys-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC70",
@@ -767,7 +1235,41 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/scarlet-keys-campaign-expansion/",
-    "scenarioCount": 8
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "Riddles and Rain",
+        "played": false
+      },
+      {
+        "name": "Dead Heat",
+        "played": false
+      },
+      {
+        "name": "Sanguine Shadows",
+        "played": false
+      },
+      {
+        "name": "Dealings in the Dark",
+        "played": false
+      },
+      {
+        "name": "Dogs of War",
+        "played": false
+      },
+      {
+        "name": "On Thin Ice",
+        "played": false
+      },
+      {
+        "name": "Dancing Mad",
+        "played": false
+      },
+      {
+        "name": "Congress of the Keys",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC71",
@@ -778,7 +1280,13 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/fortune-and-folly/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Fortune and Folly",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC72",
@@ -789,7 +1297,8 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/forgotten-age-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC73",
@@ -800,7 +1309,41 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/forgotten-age-campaign-expansion/",
-    "scenarioCount": 8
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "The Untamed Wilds",
+        "played": false
+      },
+      {
+        "name": "The Doom of Eztli",
+        "played": false
+      },
+      {
+        "name": "Threads of Fate",
+        "played": false
+      },
+      {
+        "name": "The Boundary Beyond",
+        "played": false
+      },
+      {
+        "name": "Heart of the Elders",
+        "played": false
+      },
+      {
+        "name": "The City of Archives",
+        "played": false
+      },
+      {
+        "name": "The Depths of Yoth",
+        "played": false
+      },
+      {
+        "name": "Shattered Aeons",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC74",
@@ -811,7 +1354,8 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/circle-undone-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC75",
@@ -822,7 +1366,41 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/circle-undone-campaign-expansion/",
-    "scenarioCount": 8
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "The Witching Hour",
+        "played": false
+      },
+      {
+        "name": "At Death's Doorstep",
+        "played": false
+      },
+      {
+        "name": "The Secret Name",
+        "played": false
+      },
+      {
+        "name": "The Wages of Sin",
+        "played": false
+      },
+      {
+        "name": "For the Greater Good",
+        "played": false
+      },
+      {
+        "name": "Union and Disillusion",
+        "played": false
+      },
+      {
+        "name": "In the Clutches of Chaos",
+        "played": false
+      },
+      {
+        "name": "Before the Black Throne",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC76",
@@ -830,10 +1408,11 @@
     "cycle": "Hemlock Vale",
     "type": "Investigator Expansion",
     "owned": "Owned",
-    "played": "",
+    "played": "No",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/feast-hemlock-vale-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC77",
@@ -841,10 +1420,11 @@
     "cycle": "Hemlock Vale",
     "type": "Investigator Expansion",
     "owned": "Owned",
-    "played": "",
+    "played": "No",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/feast-hemlock-vale-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC78",
@@ -855,7 +1435,8 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/dream-eaters-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC79",
@@ -866,7 +1447,41 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/dream-eaters-campaign-expansion/",
-    "scenarioCount": 8
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "Beyond the Gates of Sleep",
+        "played": false
+      },
+      {
+        "name": "The Search for Kadath",
+        "played": false
+      },
+      {
+        "name": "Dark Side of the Moon",
+        "played": false
+      },
+      {
+        "name": "Where the Gods Dwell",
+        "played": false
+      },
+      {
+        "name": "Waking Nightmare",
+        "played": false
+      },
+      {
+        "name": "A Thousand Shapes of Horror",
+        "played": false
+      },
+      {
+        "name": "Point of No Return",
+        "played": false
+      },
+      {
+        "name": "Weaver of the Cosmos",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC80",
@@ -877,7 +1492,13 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/midwinter-gala/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "The Midwinter Gala",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC81",
@@ -888,7 +1509,8 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/innsmouth-conspiracy-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC82",
@@ -899,7 +1521,41 @@
     "played": "",
     "comments": "reedition of already owned",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/innsmouth-conspiracy-campaign-expansion/",
-    "scenarioCount": 8
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "The Pit of Despair",
+        "played": false
+      },
+      {
+        "name": "The Vanishing of Elina Harper",
+        "played": false
+      },
+      {
+        "name": "In Too Deep",
+        "played": false
+      },
+      {
+        "name": "Devil Reef",
+        "played": false
+      },
+      {
+        "name": "Horror in High Gear",
+        "played": false
+      },
+      {
+        "name": "A Light in the Fog",
+        "played": false
+      },
+      {
+        "name": "The Lair of Dagon",
+        "played": false
+      },
+      {
+        "name": "Into the Maelstrom",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC83",
@@ -907,10 +1563,11 @@
     "cycle": "Drowned City",
     "type": "Investigator Expansion",
     "owned": "Owned",
-    "played": "",
+    "played": "No",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/drowned-city-investigator-expansion/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC84",
@@ -918,10 +1575,44 @@
     "cycle": "Drowned City",
     "type": "Campaign Expansion",
     "owned": "Owned",
-    "played": "",
+    "played": "No",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/drowned-city-campaign-expansion/",
-    "scenarioCount": 8
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "Scenario 1",
+        "played": false
+      },
+      {
+        "name": "Scenario 2",
+        "played": false
+      },
+      {
+        "name": "Scenario 3",
+        "played": false
+      },
+      {
+        "name": "Scenario 4",
+        "played": false
+      },
+      {
+        "name": "Scenario 5",
+        "played": false
+      },
+      {
+        "name": "Scenario 6",
+        "played": false
+      },
+      {
+        "name": "Scenario 7",
+        "played": false
+      },
+      {
+        "name": "Scenario 8",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC85",
@@ -932,7 +1623,13 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/film-fatale/",
-    "scenarioCount": 1
+    "scenarioCount": 1,
+    "scenarios": [
+      {
+        "name": "Film Fatale",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC100",
@@ -943,7 +1640,21 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/arkham-horror-the-card-game-core-set/",
-    "scenarioCount": 3
+    "scenarioCount": 3,
+    "scenarios": [
+      {
+        "name": "The Gathering",
+        "played": false
+      },
+      {
+        "name": "The Midnight Masks",
+        "played": false
+      },
+      {
+        "name": "The Devourer Below",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC101",
@@ -954,7 +1665,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/tommy-muldoon-investigator-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC102",
@@ -965,7 +1677,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/carolyn-fern-investigator-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC103",
@@ -976,7 +1689,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/andre-patel-investigator-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC104",
@@ -987,7 +1701,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/marie-lambeau-investigator-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "AHC105",
@@ -998,7 +1713,8 @@
     "played": "",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/miguel-de-la-cruz-investigator-deck/",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "NAH10",
@@ -1006,10 +1722,11 @@
     "cycle": "Novellas",
     "type": "Novella",
     "owned": "Owned",
-    "played": "",
+    "played": "No",
     "comments": "",
     "url": "",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "NAH11",
@@ -1020,7 +1737,8 @@
     "played": "",
     "comments": "",
     "url": "",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "NAH12",
@@ -1031,7 +1749,8 @@
     "played": "",
     "comments": "",
     "url": "",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "NAH13",
@@ -1042,7 +1761,8 @@
     "played": "",
     "comments": "",
     "url": "",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "NAH14",
@@ -1053,7 +1773,8 @@
     "played": "",
     "comments": "",
     "url": "",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "NAH15",
@@ -1064,7 +1785,8 @@
     "played": "",
     "comments": "",
     "url": "",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   },
   {
     "id": "NAH16",
@@ -1075,6 +1797,7 @@
     "played": "",
     "comments": "",
     "url": "",
-    "scenarioCount": 0
+    "scenarioCount": 0,
+    "scenarios": []
   }
 ]

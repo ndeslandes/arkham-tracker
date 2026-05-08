@@ -2,6 +2,11 @@
 
 import { useState, useEffect } from 'react';
 
+interface Scenario {
+  name: string;
+  played: boolean;
+}
+
 interface Product {
   id: string;
   title: string;
@@ -9,6 +14,7 @@ interface Product {
   type: string;
   owned: 'Owned' | "Don't care" | 'Want' | 'Preordered' | '';
   played: 'Played' | 'No' | '';
+  scenarios: Scenario[];
   scenarioCount: number;
   comments?: string;
   url?: string;
@@ -70,8 +76,10 @@ export default function Home() {
   const cycles = Array.from(new Set(products.map(p => p.cycle)));
 
   const totalOwned = products.filter(p => p.owned === 'Owned' || p.owned === 'Preordered').length;
-  const totalPlayedScenarios = products.reduce((acc, p) => p.played === 'Played' ? acc + p.scenarioCount : acc, 0);
-  const totalPossibleScenarios = products.reduce((acc, p) => acc + p.scenarioCount, 0);
+  const totalPlayedScenarios = products.reduce((acc, p) => 
+    acc + (p.scenarios ? p.scenarios.filter(s => s.played).length : 0), 0);
+  const totalPossibleScenarios = products.reduce((acc, p) => 
+    acc + (p.scenarios ? p.scenarios.length : 0), 0);
   const totalItems = products.length;
 
   return (
@@ -131,90 +139,106 @@ export default function Home() {
                 {products.filter(p => p.cycle === cycle).map(product => (
                   <div 
                     key={product.id} 
-                    className={`flex flex-col md:flex-row md:items-center justify-between p-5 border relative transition-all duration-300 ${
+                    className={`flex flex-col p-5 border relative transition-all duration-300 ${
                       product.owned === 'Owned' || product.owned === 'Preordered'
                         ? 'bg-slate-900/30 border-eldritch hover:bg-slate-900/50 hover:border-slate-700/50' 
                         : 'bg-black/20 border-slate-900/50 opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <div className="flex-1 mb-6 md:mb-0">
-                      <div className="flex items-center gap-4 mb-2">
-                        <span className="px-2 py-0.5 rounded-none bg-black/60 text-[10px] font-typewriter font-bold text-slate-500 border border-eldritch/50">
-                          {product.id}
-                        </span>
-                        <h3 className="text-lg font-serif font-semibold text-slate-200 tracking-wide leading-tight">{product.title}</h3>
-                        {product.url && (
-                          <a 
-                            href={product.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="text-slate-600 hover:text-blue-400/60 transition-colors"
-                            title="View official record"
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                          </a>
-                        )}
-                      </div>
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                        <span className="text-[11px] text-slate-500 font-typewriter uppercase tracking-tighter italic">
-                          {product.type}
-                        </span>
-                        {product.comments && (
-                          <span className="text-[11px] text-slate-400 italic font-serif flex items-center gap-1.5">
-                            <span className="w-1 h-1 rounded-full bg-eldritch"></span>
-                            {product.comments}
+                    <div className="flex flex-col md:flex-row md:items-center justify-between">
+                      <div className="flex-1 mb-6 md:mb-0">
+                        <div className="flex items-center gap-4 mb-2">
+                          <span className="px-2 py-0.5 rounded-none bg-black/60 text-[10px] font-typewriter font-bold text-slate-500 border border-eldritch/50">
+                            {product.id}
                           </span>
-                        )}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-10 justify-between md:justify-end">
-                      <div className="flex flex-col min-w-[120px]">
-                        <label className="text-[9px] font-typewriter uppercase font-bold text-slate-600 mb-1.5 tracking-[0.2em]">Record Status</label>
-                        <select 
-                          value={product.owned} 
-                          onChange={(e) => updateProduct(product.id, { owned: e.target.value as Product['owned'] })}
-                          className={`text-xs font-typewriter font-bold rounded-sm px-3 py-2.5 outline-none border transition-all appearance-none cursor-pointer ${
-                            product.owned === 'Owned' 
-                              ? 'bg-blue-900/10 border-blue-900/40 text-blue-300/80 focus:border-blue-700' 
-                              : product.owned === 'Preordered'
-                              ? 'bg-purple-900/10 border-purple-900/40 text-purple-300/80 focus:border-purple-700'
-                              : product.owned === 'Want'
-                              ? 'bg-amber-900/10 border-amber-900/40 text-amber-300/80 focus:border-amber-700'
-                              : 'bg-black/40 border-eldritch text-slate-500 hover:border-slate-700'
-                          }`}
-                        >
-                          <option value="" className="bg-slate-900">Unrecorded</option>
-                          <option value="Owned" className="bg-slate-900">In Collection</option>
-                          <option value="Preordered" className="bg-slate-900">En Route</option>
-                          <option value="Want" className="bg-slate-900">Acquisition Target</option>
-                          <option value="Don't care" className="bg-slate-900">Disregarded</option>
-                        </select>
-                      </div>
-
-                      <div className="flex flex-col items-center">
-                        <label className="text-[9px] font-typewriter uppercase font-bold text-slate-600 mb-1.5 tracking-[0.2em] text-center">Executed</label>
-                        <button
-                          onClick={() => updateProduct(product.id, { played: product.played === 'Played' ? 'No' : 'Played' })}
-                          className={`w-11 h-11 rounded-sm flex items-center justify-center border transition-all relative group ${
-                            product.played === 'Played'
-                              ? 'bg-emerald-900/10 border-emerald-800/50 text-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.05)]'
-                              : 'bg-black/40 border-eldritch text-slate-700 hover:border-slate-600'
-                          }`}
-                          title={product.played === 'Played' ? 'Mark as Not Played' : 'Mark as Played'}
-                        >
-                          {product.played === 'Played' ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                          ) : (
-                            <div className="w-3.5 h-3.5 rounded-none border border-slate-700 group-hover:border-slate-500"></div>
+                          <h3 className="text-lg font-serif font-semibold text-slate-200 tracking-wide leading-tight">{product.title}</h3>
+                          {product.url && (
+                            <a 
+                              href={product.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="text-slate-600 hover:text-blue-400/60 transition-colors"
+                              title="View official record"
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                            </a>
                           )}
-                        </button>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                          <span className="text-[11px] text-slate-500 font-typewriter uppercase tracking-tighter italic">
+                            {product.type}
+                          </span>
+                          {product.comments && (
+                            <span className="text-[11px] text-slate-400 italic font-serif flex items-center gap-1.5">
+                              <span className="w-1 h-1 rounded-full bg-eldritch"></span>
+                              {product.comments}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-10 justify-between md:justify-end">
+                        <div className="flex flex-col min-w-[120px]">
+                          <label className="text-[9px] font-typewriter uppercase font-bold text-slate-600 mb-1.5 tracking-[0.2em]">Record Status</label>
+                          <select 
+                            value={product.owned} 
+                            onChange={(e) => updateProduct(product.id, { owned: e.target.value as Product['owned'] })}
+                            className={`text-xs font-typewriter font-bold rounded-sm px-3 py-2.5 outline-none border transition-all appearance-none cursor-pointer ${
+                              product.owned === 'Owned' 
+                                ? 'bg-blue-900/10 border-blue-900/40 text-blue-300/80 focus:border-blue-700' 
+                                : product.owned === 'Preordered'
+                                ? 'bg-purple-900/10 border-purple-900/40 text-purple-300/80 focus:border-purple-700'
+                                : product.owned === 'Want'
+                                ? 'bg-amber-900/10 border-amber-900/40 text-amber-300/80 focus:border-amber-700'
+                                : 'bg-black/40 border-eldritch text-slate-500 hover:border-slate-700'
+                            }`}
+                          >
+                            <option value="" className="bg-slate-900">Unrecorded</option>
+                            <option value="Owned" className="bg-slate-900">In Collection</option>
+                            <option value="Preordered" className="bg-slate-900">En Route</option>
+                            <option value="Want" className="bg-slate-900">Acquisition Target</option>
+                            <option value="Don't care" className="bg-slate-900">Disregarded</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
+
+                    {/* Scenarios List */}
+                    {product.scenarios && product.scenarios.length > 0 && (
+                      <div className="mt-6 pt-6 border-t border-eldritch/30">
+                        <label className="text-[9px] font-typewriter uppercase font-bold text-slate-600 mb-3 block tracking-[0.2em]">Scenarios</label>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {product.scenarios.map((scenario, idx) => (
+                            <div 
+                              key={idx}
+                              onClick={() => {
+                                const newScenarios = [...product.scenarios];
+                                newScenarios[idx] = { ...scenario, played: !scenario.played };
+                                updateProduct(product.id, { scenarios: newScenarios });
+                              }}
+                              className={`flex items-center gap-3 p-2 rounded-sm border cursor-pointer transition-all ${
+                                scenario.played 
+                                  ? 'bg-emerald-900/10 border-emerald-800/40 text-emerald-400/90 shadow-[0_0_10px_rgba(16,185,129,0.02)]' 
+                                  : 'bg-black/20 border-eldritch/50 text-slate-500 hover:border-slate-700 hover:bg-black/40'
+                              }`}
+                            >
+                              <div className={`w-4 h-4 rounded-none border flex items-center justify-center transition-all ${
+                                scenario.played ? 'border-emerald-500 bg-emerald-500/20' : 'border-slate-700'
+                              }`}>
+                                {scenario.played && (
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                  </svg>
+                                )}
+                              </div>
+                              <span className="text-xs font-serif tracking-wide">{scenario.name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
