@@ -238,10 +238,10 @@ export default function Home() {
               <section key={cycle} className="scroll-mt-48 relative">
                 {/* Completed Stamp */}
                 {allPlayed && (
-                  <div className="absolute -top-6 -right-4 pointer-events-none z-20 opacity-40 mix-blend-screen -rotate-12 border-4 border-emerald-900/50 p-2 rounded-lg">
-                    <div className="border-2 border-emerald-900/30 px-4 py-1 flex flex-col items-center">
-                      <span className="font-typewriter font-bold text-emerald-500 text-[10px] tracking-[0.2em] uppercase leading-none mb-1">Investigation</span>
-                      <span className="font-typewriter font-bold text-emerald-400 text-xl tracking-[0.1em] uppercase leading-none">Archived</span>
+                  <div className="absolute -top-10 right-0 pointer-events-none z-20 opacity-60 mix-blend-lighten -rotate-12 border-[6px] border-emerald-500/40 p-1.5 rounded-sm shadow-[0_0_20px_rgba(16,185,129,0.1)]">
+                    <div className="border-2 border-emerald-500/30 px-6 py-2 flex flex-col items-center bg-emerald-950/10 backdrop-blur-[2px]">
+                      <span className="font-typewriter font-black text-emerald-500 text-[11px] tracking-[0.3em] uppercase leading-none mb-1">Investigation</span>
+                      <span className="font-typewriter font-black text-emerald-400 text-2xl tracking-[0.15em] uppercase leading-none">Archived</span>
                     </div>
                   </div>
                 )}
@@ -251,19 +251,31 @@ export default function Home() {
                   className="flex items-center gap-4 mb-8 cursor-pointer group select-none relative z-10"
                 >
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-eldritch to-transparent"></div>
-                  <div className="flex flex-col items-center gap-1 px-4">
-                    <div className="flex items-center gap-3">
+                  <div className="flex flex-col items-center gap-2 px-6">
+                    <div className="flex items-center gap-4">
                       <svg 
                         xmlns="http://www.w3.org/2000/svg" 
-                        className={`h-4 w-4 text-slate-500 transition-transform duration-300 ${isCollapsed ? '-rotate-90' : ''}`} 
+                        className={`h-5 w-5 text-slate-500 transition-transform duration-300 ${isCollapsed ? '-rotate-90' : ''}`} 
                         fill="none" viewBox="0 0 24 24" stroke="currentColor"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                       </svg>
                       <h2 className="text-2xl font-typewriter font-bold text-slate-300 uppercase tracking-widest group-hover:text-white transition-colors text-center">
                         {cycle}
                       </h2>
+                      {allPlayed && (
+                        <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/40 text-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.2)]">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                      )}
                     </div>
+                    {allPlayed && (
+                      <span className="text-[10px] font-typewriter font-bold text-emerald-500 uppercase tracking-[0.4em]">
+                        Case Closed
+                      </span>
+                    )}
                   </div>
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-eldritch to-transparent"></div>
                 </div>
