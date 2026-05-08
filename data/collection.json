@@ -1125,7 +1125,7 @@
     "scenarios": [
       {
         "name": "Extracurricular Activity",
-        "played": false
+        "played": true
       },
       {
         "name": "The House Always Wins",
@@ -1133,27 +1133,27 @@
       },
       {
         "name": "The Miskatonic Museum",
-        "played": false
+        "played": true
       },
       {
         "name": "The Essex County Express",
-        "played": false
+        "played": true
       },
       {
         "name": "Blood on the Altar",
-        "played": false
+        "played": true
       },
       {
         "name": "Undimensioned and Unseen",
-        "played": false
+        "played": true
       },
       {
         "name": "Where Doom Awaits",
-        "played": false
+        "played": true
       },
       {
         "name": "Lost in Time and Space",
-        "played": false
+        "played": true
       }
     ]
   },
@@ -1836,5 +1836,7 @@
     "url": "",
     "scenarioCount": 0,
     "scenarios": []
+  }
+][]
   }
 ]
