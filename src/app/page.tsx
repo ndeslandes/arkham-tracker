@@ -78,8 +78,9 @@ export default function Home() {
   const totalOwned = products.filter(p => p.owned === 'Owned' || p.owned === 'Preordered').length;
   const totalPlayedScenarios = products.reduce((acc, p) => 
     acc + (p.scenarios ? p.scenarios.filter(s => s.played).length : 0), 0);
-  const totalPossibleScenarios = products.reduce((acc, p) => 
-    acc + (p.scenarios ? p.scenarios.length : 0), 0);
+  const totalPossibleScenarios = products
+    .filter(p => p.owned !== "Don't care")
+    .reduce((acc, p) => acc + (p.scenarios ? p.scenarios.length : 0), 0);
   const totalItems = products.length;
 
   return (
