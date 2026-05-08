@@ -1125,7 +1125,7 @@
     "scenarios": [
       {
         "name": "Extracurricular Activity",
-        "played": true
+        "played": false
       },
       {
         "name": "The House Always Wins",
@@ -1182,7 +1182,7 @@
     "scenarios": [
       {
         "name": "Curtain Call",
-        "played": false
+        "played": true
       },
       {
         "name": "The Last King",
@@ -1190,7 +1190,7 @@
       },
       {
         "name": "Echoes of the Past",
-        "played": false
+        "played": true
       },
       {
         "name": "The Unspeakable Oath",
@@ -1198,7 +1198,7 @@
       },
       {
         "name": "A Phantom of Truth",
-        "played": false
+        "played": true
       },
       {
         "name": "The Pallid Mask",
@@ -1206,7 +1206,7 @@
       },
       {
         "name": "Black Stars Rise",
-        "played": false
+        "played": true
       },
       {
         "name": "Dim Carcosa",
@@ -1837,4 +1837,4 @@
     "scenarioCount": 0,
     "scenarios": []
   }
-]]
+]

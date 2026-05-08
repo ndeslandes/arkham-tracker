@@ -30,18 +30,32 @@ export default function Home() {
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
-          setProducts(data);
+          // Synchronize scenario 'played' status across all products on load
+          const playedScenarios = new Set<string>();
+          data.forEach((p: Product) => {
+            p.scenarios?.forEach(s => {
+              if (s.played) playedScenarios.add(`${p.cycle}|${s.name}`);
+            });
+          });
+
+          const synchronizedData = data.map((p: Product) => ({
+            ...p,
+            scenarios: p.scenarios?.map(s => ({
+              ...s,
+              played: s.played || playedScenarios.has(`${p.cycle}|${s.name}`)
+            })) || []
+          }));
+
+          setProducts(synchronizedData);
           
           // Auto-collapse completed cycles
           const initialCollapsed: Record<string, boolean> = {};
-          const cycles = Array.from(new Set(data.map((p: Product) => p.cycle)));
+          const cycles = Array.from(new Set(synchronizedData.map((p: Product) => p.cycle)));
           
           cycles.forEach(cycle => {
-            const cycleProducts = data.filter((p: Product) => p.cycle === cycle);
+            const cycleProducts = synchronizedData.filter((p: Product) => p.cycle === cycle);
             if (cycleProducts.length > 0) {
               const allScenarios = cycleProducts.flatMap(p => p.scenarios || []);
-              const hasScenarios = allScenarios.length > 0;
-              // A cycle is complete if ALL its unique scenarios are played
               const uniqueNames = new Set(allScenarios.map(s => s.name));
               const allPlayed = uniqueNames.size > 0 && Array.from(uniqueNames).every(name => 
                 allScenarios.find(s => s.name === name)?.played
