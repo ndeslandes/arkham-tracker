@@ -37,11 +37,15 @@ export default function Home() {
           const cycles = Array.from(new Set(data.map((p: Product) => p.cycle)));
           
           cycles.forEach(cycle => {
-            const cycleProducts = data.filter((p: Product) => p.cycle === cycle && p.owned !== "Don't care");
+            const cycleProducts = data.filter((p: Product) => p.cycle === cycle);
             if (cycleProducts.length > 0) {
               const allScenarios = cycleProducts.flatMap(p => p.scenarios || []);
               const hasScenarios = allScenarios.length > 0;
-              const allPlayed = hasScenarios && allScenarios.every(s => s.played);
+              // A cycle is complete if ALL its unique scenarios are played
+              const uniqueNames = new Set(allScenarios.map(s => s.name));
+              const allPlayed = uniqueNames.size > 0 && Array.from(uniqueNames).every(name => 
+                allScenarios.find(s => s.name === name)?.played
+              );
               if (allPlayed) {
                 initialCollapsed[cycle] = true;
               }
@@ -98,27 +102,24 @@ export default function Home() {
     );
   }
 
-  // Unique scenarios calculation
-  const uniqueScenariosMap = new Map<string, { played: boolean; isDisregarded: boolean }>();
+  // Unique scenarios calculation (Count every unique scenario once per cycle)
+  const uniqueScenariosMap = new Map<string, { played: boolean }>();
   
   products.forEach(p => {
     p.scenarios.forEach(s => {
       const key = `${p.cycle}|${s.name}`;
       const existing = uniqueScenariosMap.get(key);
-      
       const played = (existing?.played) || s.played;
-      const isDisregarded = existing ? (existing.isDisregarded && p.owned === "Don't care") : (p.owned === "Don't care");
-      
-      uniqueScenariosMap.set(key, { played, isDisregarded });
+      uniqueScenariosMap.set(key, { played });
     });
   });
 
   const uniqueScenariosList = Array.from(uniqueScenariosMap.values());
-  const totalPlayedScenarios = uniqueScenariosList.filter(s => s.played && !s.isDisregarded).length;
-  const totalPossibleScenarios = uniqueScenariosList.filter(s => !s.isDisregarded).length;
+  const totalPlayedScenarios = uniqueScenariosList.filter(s => s.played).length;
+  const totalPossibleScenarios = uniqueScenariosList.length;
 
-  const totalOwned = products.filter(p => (p.owned === 'Owned' || p.owned === 'Preordered') && p.owned !== "Don't care").length;
-  const totalItems = products.filter(p => p.owned !== "Don't care").length;
+  const totalOwned = products.filter(p => p.owned === 'Owned' || p.owned === 'Preordered').length;
+  const totalItems = products.length;
 
   const toggleScenario = async (productId: string, scenarioIdx: number) => {
     const product = products.find(p => p.id === productId);
@@ -166,7 +167,7 @@ export default function Home() {
     if (bottomCycles.includes(a) && bottomCycles.includes(b)) {
       return bottomCycles.indexOf(a) - bottomCycles.indexOf(b);
     }
-    return 0; // Maintain relative order for others
+    return 0;
   });
 
   return (
@@ -218,14 +219,12 @@ export default function Home() {
           {cycles.map(cycle => {
             const cycleProducts = products.filter(p => p.cycle === cycle);
             const allScenarios = cycleProducts.flatMap(p => p.scenarios || []);
-            const caredScenarios = allScenarios.filter((_, idx) => {
-               const p = cycleProducts.find(prod => prod.scenarios?.includes(allScenarios[idx]));
-               return p && p.owned !== "Don't care";
-            });
-            const allPlayed = caredScenarios.length > 0 && caredScenarios.every(s => s.played);
+            const uniqueNames = Array.from(new Set(allScenarios.map(s => s.name)));
+            const allPlayed = uniqueNames.length > 0 && uniqueNames.every(name => 
+               allScenarios.find(s => s.name === name)?.played
+            );
             const isCollapsed = collapsedCycles[cycle];
 
-            // Grouping Logic
             const investigatorExpansions = cycleProducts.filter(p => p.type === 'Investigator Expansion');
             const campaignExpansions = cycleProducts.filter(p => p.type === 'Campaign Expansion');
             const legacyProducts = cycleProducts.filter(p => p.type === 'Deluxe' || p.type === 'Mythos Pack');
@@ -242,7 +241,6 @@ export default function Home() {
 
             return (
               <section key={cycle} className="scroll-mt-48 relative">
-                {/* Completed Stamp */}
                 {allPlayed && (
                   <div className="absolute -top-10 right-0 pointer-events-none z-20 opacity-60 mix-blend-lighten -rotate-12 border-[6px] border-emerald-500/40 p-1.5 rounded-sm shadow-[0_0_20px_rgba(16,185,129,0.1)]">
                     <div className="border-2 border-emerald-500/30 px-6 py-2 flex flex-col items-center bg-emerald-950/10 backdrop-blur-[2px]">

@@ -7,7 +7,12 @@ const DATA_PATH = path.join(process.cwd(), 'data', 'collection.json');
 export async function GET() {
   try {
     const data = await fs.readFile(DATA_PATH, 'utf-8');
-    return NextResponse.json(JSON.parse(data));
+    // Sanitize data in case of trailing bracket corruption
+    let sanitized = data.trim();
+    if (sanitized.endsWith(']]')) {
+      sanitized = sanitized.substring(0, sanitized.length - 1);
+    }
+    return NextResponse.json(JSON.parse(sanitized));
   } catch (error) {
     console.error('Error reading collection:', error);
     return NextResponse.json({ error: 'Failed to read data' }, { status: 500 });
@@ -18,13 +23,17 @@ export async function POST(request: Request) {
   try {
     const updatedProduct = await request.json();
     const data = await fs.readFile(DATA_PATH, 'utf-8');
-    const products = JSON.parse(data);
+    // Sanitize on read
+    let sanitized = data.trim();
+    if (sanitized.endsWith(']]')) sanitized = sanitized.substring(0, sanitized.length - 1);
+    
+    let products = JSON.parse(sanitized);
 
-    const index = products.findIndex((p: { id: string }) => p.id === updatedProduct.id);
-    if (index > -1) {
-      products[index] = { ...products[index], ...updatedProduct };
-      await fs.writeFile(DATA_PATH, JSON.stringify(products, null, 2));
-      return NextResponse.json({ success: true, product: products[index] });
+    const index = products.findIndex((p: any) => p.id === updatedProduct.id);
+    if (index !== -1) {
+      products[index] = updatedProduct;
+      await fs.writeFile(DATA_PATH, JSON.stringify(products, null, 2), 'utf-8');
+      return NextResponse.json({ success: true });
     } else {
       return NextResponse.json({ error: 'Product not found' }, { status: 404 });
     }
