@@ -313,10 +313,18 @@
     "played": "No",
     "comments": "multiplayer",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/labyrinths-lunacy/",
-    "scenarioCount": 1,
+    "scenarioCount": 3,
     "scenarios": [
       {
-        "name": "The Labyrinths of Lunacy",
+        "name": "The Labyrinths of Lunacy: Group A",
+        "played": false
+      },
+      {
+        "name": "The Labyrinths of Lunacy: Group B",
+        "played": false
+      },
+      {
+        "name": "The Labyrinths of Lunacy: Group C",
         "played": false
       }
     ]
@@ -465,10 +473,14 @@
     "played": "Played",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/guardians-abyss/",
-    "scenarioCount": 1,
+    "scenarioCount": 2,
     "scenarios": [
       {
-        "name": "Guardians of the Abyss",
+        "name": "The Eternal Slumber",
+        "played": true
+      },
+      {
+        "name": "The Night's Usurper",
         "played": true
       }
     ]
@@ -1277,13 +1289,17 @@
     "cycle": "Standalones",
     "type": "Standalone",
     "owned": "Owned",
-    "played": "",
+    "played": "No",
     "comments": "",
     "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/fortune-and-folly/",
-    "scenarioCount": 1,
+    "scenarioCount": 2,
     "scenarios": [
       {
-        "name": "Fortune and Folly",
+        "name": "Part 1: The Stakeout",
+        "played": false
+      },
+      {
+        "name": "Part 2: The Heist",
         "played": false
       }
     ]
