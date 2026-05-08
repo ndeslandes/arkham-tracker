@@ -23,6 +23,7 @@ interface Product {
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+  const [hideDisregarded, setHideDisregarded] = useState(false);
 
   useEffect(() => {
     fetch('/api/collection')
@@ -73,8 +74,6 @@ export default function Home() {
     );
   }
 
-  const cycles = Array.from(new Set(products.map(p => p.cycle)));
-
   // Unique scenarios calculation
   const uniqueScenariosMap = new Map<string, { played: boolean; isDisregarded: boolean }>();
   
@@ -84,10 +83,6 @@ export default function Home() {
       const existing = uniqueScenariosMap.get(key);
       
       const played = (existing?.played) || s.played;
-      // A scenario is disregarded only if ALL products it appears in are disregarded
-      // Actually, user said "do not count the disregarded in scenarios to solve"
-      // Usually, if you own it in one place, you care about it.
-      // So if ANY product containing this scenario is NOT "Don't care", it's not disregarded.
       const isDisregarded = existing ? (existing.isDisregarded && p.owned === "Don't care") : (p.owned === "Don't care");
       
       uniqueScenariosMap.set(key, { played, isDisregarded });
@@ -110,7 +105,6 @@ export default function Home() {
     const scenarioName = scenario.name;
     const cycle = product.cycle;
 
-    // Synchronize all products that have this same scenario
     const updatedProducts = products.map(p => {
       if (p.cycle === cycle) {
         const sIdx = p.scenarios.findIndex(s => s.name === scenarioName);
@@ -123,14 +117,11 @@ export default function Home() {
       return p;
     });
 
-    // Optimistic update
     const prevProducts = products;
     setProducts(updatedProducts);
 
     try {
-      // Persist changes for ALL affected products
       const affectedProducts = updatedProducts.filter((p, idx) => p.scenarios !== prevProducts[idx].scenarios);
-      
       await Promise.all(affectedProducts.map(p => 
         fetch('/api/collection', {
           method: 'POST',
@@ -144,13 +135,28 @@ export default function Home() {
     }
   };
 
+  const filteredProducts = products.filter(p => !hideDisregarded || p.owned !== "Don't care");
+  const cycles = Array.from(new Set(filteredProducts.map(p => p.cycle)));
+
   return (
     <main className="min-h-screen bg-background text-foreground selection:bg-eldritch selection:text-white">
       <div className="max-w-4xl mx-auto p-4 md:p-8 relative z-10">
         <header className="mb-12 sticky top-0 bg-background/90 backdrop-blur-md py-8 z-10 border-b-2 border-eldritch shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
-          <h1 className="text-4xl font-typewriter font-bold mb-8 text-slate-100 tracking-tight text-center uppercase">
-            Investigation Archive: Arkham TCG
-          </h1>
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+            <h1 className="text-4xl font-typewriter font-bold text-slate-100 tracking-tight uppercase">
+              Investigation Archive: Arkham TCG
+            </h1>
+            <button
+              onClick={() => setHideDisregarded(!hideDisregarded)}
+              className={`px-4 py-2 text-[10px] font-typewriter font-bold uppercase tracking-widest border transition-all ${
+                hideDisregarded 
+                  ? 'bg-amber-900/20 border-amber-700 text-amber-400 shadow-[0_0_15px_rgba(180,83,9,0.1)]' 
+                  : 'bg-black/40 border-eldritch text-slate-500 hover:border-slate-700 hover:text-slate-400'
+              }`}
+            >
+              {hideDisregarded ? 'Showing Active Records' : 'Hide Disregarded'}
+            </button>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-slate-900/60 p-5 rounded-sm border border-eldritch shadow-lg relative overflow-hidden group">
               <div className="absolute top-0 left-0 w-1 h-full bg-blue-900/50 group-hover:bg-blue-800 transition-colors"></div>
@@ -159,12 +165,12 @@ export default function Home() {
                 <p className="text-3xl font-typewriter font-bold text-blue-400">
                   {totalOwned} <span className="text-slate-600 text-xl">/ {totalItems}</span>
                 </p>
-                <p className="text-blue-500/50 font-typewriter text-sm mb-1">{Math.round((totalOwned / totalItems) * 100)}%</p>
+                <p className="text-blue-500/50 font-typewriter text-sm mb-1">{totalItems > 0 ? Math.round((totalOwned / totalItems) * 100) : 0}%</p>
               </div>
               <div className="mt-4 w-full bg-black/40 rounded-none h-1.5 border border-eldritch/30">
                 <div 
                   className="bg-blue-800 h-full rounded-none transition-all duration-1000 shadow-[0_0_8px_rgba(30,58,138,0.5)]" 
-                  style={{ width: `${(totalOwned / totalItems) * 100}%` }}
+                  style={{ width: `${totalItems > 0 ? (totalOwned / totalItems) * 100 : 0}%` }}
                 ></div>
               </div>
             </div>
@@ -198,7 +204,7 @@ export default function Home() {
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent via-eldritch to-transparent"></div>
               </div>
               <div className="grid gap-4">
-                {products.filter(p => p.cycle === cycle).map(product => (
+                {filteredProducts.filter(p => p.cycle === cycle).map(product => (
                   <div 
                     key={product.id} 
                     className={`flex flex-col p-5 border relative transition-all duration-300 ${
@@ -267,7 +273,6 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Scenarios List */}
                     {product.scenarios && product.scenarios.length > 0 && (
                       <div className="mt-6 pt-6 border-t border-eldritch/30">
                         <label className="text-[9px] font-typewriter uppercase font-bold text-slate-600 mb-3 block tracking-[0.2em]">Scenarios</label>
