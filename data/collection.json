@@ -784,7 +784,7 @@
     "scenarioCount": 1,
     "scenarios": [
       {
-        "name": "The Blob That Ate Everything",
+        "name": "The Dirty Work",
         "played": false
       }
     ]
@@ -1141,7 +1141,7 @@
       },
       {
         "name": "The House Always Wins",
-        "played": false
+        "played": true
       },
       {
         "name": "The Miskatonic Museum",
@@ -1198,7 +1198,7 @@
       },
       {
         "name": "The Last King",
-        "played": false
+        "played": true
       },
       {
         "name": "Echoes of the Past",
@@ -1206,7 +1206,7 @@
       },
       {
         "name": "The Unspeakable Oath",
-        "played": false
+        "played": true
       },
       {
         "name": "A Phantom of Truth",
@@ -1214,7 +1214,7 @@
       },
       {
         "name": "The Pallid Mask",
-        "played": false
+        "played": true
       },
       {
         "name": "Black Stars Rise",
@@ -1222,7 +1222,7 @@
       },
       {
         "name": "Dim Carcosa",
-        "played": false
+        "played": true
       }
     ]
   },
@@ -1574,31 +1574,31 @@
     "scenarios": [
       {
         "name": "The Pit of Despair",
-        "played": false
+        "played": true
       },
       {
         "name": "The Vanishing of Elina Harper",
-        "played": false
+        "played": true
       },
       {
         "name": "In Too Deep",
-        "played": false
+        "played": true
       },
       {
         "name": "Devil Reef",
-        "played": false
+        "played": true
       },
       {
         "name": "Horror in High Gear",
-        "played": false
+        "played": true
       },
       {
         "name": "A Light in the Fog",
-        "played": false
+        "played": true
       },
       {
         "name": "The Lair of Dagon",
-        "played": false
+        "played": true
       },
       {
         "name": "Into the Maelstrom",
@@ -1853,4 +1853,4 @@
     "scenarioCount": 0,
     "scenarios": []
   }
-]]
+]
