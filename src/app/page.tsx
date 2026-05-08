@@ -168,7 +168,7 @@ export default function Home() {
   };
 
   const cycles = Array.from(new Set(products.map(p => p.cycle))).sort((a, b) => {
-    const bottomCycles = ['Standalones', 'Investigator Starter Decks'];
+    const bottomCycles = ['Standalones', 'Investigator Starter Decks', 'Novellas'];
     if (bottomCycles.includes(a) && !bottomCycles.includes(b)) return 1;
     if (!bottomCycles.includes(a) && bottomCycles.includes(b)) return -1;
     if (bottomCycles.includes(a) && bottomCycles.includes(b)) {
@@ -380,28 +380,38 @@ export default function Home() {
                           <div className="mt-6 pt-6 border-t border-eldritch/30">
                             <label className="text-[9px] font-typewriter uppercase font-bold text-slate-600 mb-3 block tracking-[0.2em]">Scenarios</label>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                              {product.scenarios.map((scenario, idx) => (
-                                <div 
-                                  key={idx}
-                                  onClick={() => toggleScenario(product.id, idx)}
-                                  className={`flex items-center gap-3 p-2 rounded-sm border cursor-pointer transition-all ${
-                                    scenario.played 
-                                      ? 'bg-emerald-900/10 border-emerald-800/40 text-emerald-400/90 shadow-[0_0_10px_rgba(16,185,129,0.02)]' 
-                                      : 'bg-black/20 border-eldritch/50 text-slate-500 hover:border-slate-700 hover:bg-black/40'
-                                  }`}
-                                >
-                                  <div className={`w-4 h-4 rounded-none border flex items-center justify-center transition-all ${
-                                    scenario.played ? 'border-emerald-500 bg-emerald-500/20' : 'border-slate-700'
-                                  }`}>
-                                    {scenario.played && (
-                                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                      </svg>
-                                    )}
+                              {product.scenarios.map((scenario, idx) => {
+                                // Get index of this scenario in the unique list for this cycle to show consistent numbering
+                                const cycleScenarios = products
+                                  .filter(p => p.cycle === product.cycle)
+                                  .flatMap(p => p.scenarios);
+                                const uniqueNames = Array.from(new Set(cycleScenarios.map(s => s.name)));
+                                const displayNum = uniqueNames.indexOf(scenario.name) + 1;
+
+                                return (
+                                  <div 
+                                    key={idx}
+                                    onClick={() => toggleScenario(product.id, idx)}
+                                    className={`flex items-center gap-3 p-2 rounded-sm border cursor-pointer transition-all ${
+                                      scenario.played 
+                                        ? 'bg-emerald-900/10 border-emerald-800/40 text-emerald-400/90 shadow-[0_0_10px_rgba(16,185,129,0.02)]' 
+                                        : 'bg-black/20 border-eldritch/50 text-slate-500 hover:border-slate-700 hover:bg-black/40'
+                                    }`}
+                                  >
+                                    <div className={`w-4 h-4 rounded-none border flex items-center justify-center transition-all ${
+                                      scenario.played ? 'border-emerald-500 bg-emerald-500/20' : 'border-slate-700'
+                                    }`}>
+                                      {scenario.played && (
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                      )}
+                                    </div>
+                                    <span className="text-[10px] font-typewriter font-bold opacity-40 min-w-[1.2em]">{displayNum}.</span>
+                                    <span className="text-xs font-serif tracking-wide">{scenario.name}</span>
                                   </div>
-                                  <span className="text-xs font-serif tracking-wide">{scenario.name}</span>
-                                </div>
-                              ))}
+                                );
+                              })}
                             </div>
                           </div>
                         )}
