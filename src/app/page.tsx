@@ -75,13 +75,74 @@ export default function Home() {
 
   const cycles = Array.from(new Set(products.map(p => p.cycle)));
 
+  // Unique scenarios calculation
+  const uniqueScenariosMap = new Map<string, { played: boolean; isDisregarded: boolean }>();
+  
+  products.forEach(p => {
+    p.scenarios.forEach(s => {
+      const key = `${p.cycle}|${s.name}`;
+      const existing = uniqueScenariosMap.get(key);
+      
+      const played = (existing?.played) || s.played;
+      // A scenario is disregarded only if ALL products it appears in are disregarded
+      // Actually, user said "do not count the disregarded in scenarios to solve"
+      // Usually, if you own it in one place, you care about it.
+      // So if ANY product containing this scenario is NOT "Don't care", it's not disregarded.
+      const isDisregarded = existing ? (existing.isDisregarded && p.owned === "Don't care") : (p.owned === "Don't care");
+      
+      uniqueScenariosMap.set(key, { played, isDisregarded });
+    });
+  });
+
+  const uniqueScenariosList = Array.from(uniqueScenariosMap.values());
+  const totalPlayedScenarios = uniqueScenariosList.filter(s => s.played).length;
+  const totalPossibleScenarios = uniqueScenariosList.filter(s => !s.isDisregarded).length;
+
   const totalOwned = products.filter(p => p.owned === 'Owned' || p.owned === 'Preordered').length;
-  const totalPlayedScenarios = products.reduce((acc, p) => 
-    acc + (p.scenarios ? p.scenarios.filter(s => s.played).length : 0), 0);
-  const totalPossibleScenarios = products
-    .filter(p => p.owned !== "Don't care")
-    .reduce((acc, p) => acc + (p.scenarios ? p.scenarios.length : 0), 0);
   const totalItems = products.length;
+
+  const toggleScenario = async (productId: string, scenarioIdx: number) => {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+
+    const scenario = product.scenarios[scenarioIdx];
+    const newPlayedStatus = !scenario.played;
+    const scenarioName = scenario.name;
+    const cycle = product.cycle;
+
+    // Synchronize all products that have this same scenario
+    const updatedProducts = products.map(p => {
+      if (p.cycle === cycle) {
+        const sIdx = p.scenarios.findIndex(s => s.name === scenarioName);
+        if (sIdx > -1) {
+          const newScenarios = [...p.scenarios];
+          newScenarios[sIdx] = { ...newScenarios[sIdx], played: newPlayedStatus };
+          return { ...p, scenarios: newScenarios };
+        }
+      }
+      return p;
+    });
+
+    // Optimistic update
+    const prevProducts = products;
+    setProducts(updatedProducts);
+
+    try {
+      // Persist changes for ALL affected products
+      const affectedProducts = updatedProducts.filter((p, idx) => p.scenarios !== prevProducts[idx].scenarios);
+      
+      await Promise.all(affectedProducts.map(p => 
+        fetch('/api/collection', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(p),
+        })
+      ));
+    } catch (error) {
+      console.error('Error updating scenarios:', error);
+      setProducts(prevProducts);
+    }
+  };
 
   return (
     <main className="min-h-screen bg-background text-foreground selection:bg-eldritch selection:text-white">
@@ -214,11 +275,7 @@ export default function Home() {
                           {product.scenarios.map((scenario, idx) => (
                             <div 
                               key={idx}
-                              onClick={() => {
-                                const newScenarios = [...product.scenarios];
-                                newScenarios[idx] = { ...scenario, played: !scenario.played };
-                                updateProduct(product.id, { scenarios: newScenarios });
-                              }}
+                              onClick={() => toggleScenario(product.id, idx)}
                               className={`flex items-center gap-3 p-2 rounded-sm border cursor-pointer transition-all ${
                                 scenario.played 
                                   ? 'bg-emerald-900/10 border-emerald-800/40 text-emerald-400/90 shadow-[0_0_10px_rgba(16,185,129,0.02)]' 
