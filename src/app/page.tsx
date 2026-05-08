@@ -95,11 +95,11 @@ export default function Home() {
   });
 
   const uniqueScenariosList = Array.from(uniqueScenariosMap.values());
-  const totalPlayedScenarios = uniqueScenariosList.filter(s => s.played).length;
+  const totalPlayedScenarios = uniqueScenariosList.filter(s => s.played && !s.isDisregarded).length;
   const totalPossibleScenarios = uniqueScenariosList.filter(s => !s.isDisregarded).length;
 
-  const totalOwned = products.filter(p => p.owned === 'Owned' || p.owned === 'Preordered').length;
-  const totalItems = products.length;
+  const totalOwned = products.filter(p => (p.owned === 'Owned' || p.owned === 'Preordered') && p.owned !== "Don't care").length;
+  const totalItems = products.filter(p => p.owned !== "Don't care").length;
 
   const toggleScenario = async (productId: string, scenarioIdx: number) => {
     const product = products.find(p => p.id === productId);
