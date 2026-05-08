@@ -10,6 +10,7 @@ interface Product {
   owned: 'Owned' | "Don't care" | 'Want' | 'Preordered' | '';
   played: 'Played' | 'No' | '';
   comments?: string;
+  url?: string;
 }
 
 export default function Home() {
@@ -140,6 +141,19 @@ export default function Home() {
                           {product.id}
                         </span>
                         <h3 className="text-lg font-serif font-semibold text-slate-200 tracking-wide leading-tight">{product.title}</h3>
+                        {product.url && (
+                          <a 
+                            href={product.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-slate-600 hover:text-blue-400/60 transition-colors"
+                            title="View official record"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                        )}
                       </div>
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                         <span className="text-[11px] text-slate-500 font-typewriter uppercase tracking-tighter italic">

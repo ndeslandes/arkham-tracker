@@ -6,7 +6,8 @@
     "type": "Core",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/arkham-horror-card-game/"
   },
   {
     "id": "AHC02",
@@ -15,7 +16,8 @@
     "type": "Deluxe",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC03",
@@ -24,7 +26,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC04",
@@ -33,7 +36,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC05",
@@ -42,7 +46,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC06",
@@ -51,7 +56,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC07",
@@ -60,7 +66,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC08",
@@ -69,7 +76,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "uAHC09",
@@ -78,7 +86,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/curse-rougarou/"
   },
   {
     "id": "uAHC10",
@@ -87,7 +96,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/carnevale-horrors/"
   },
   {
     "id": "AHC11",
@@ -96,7 +106,8 @@
     "type": "Deluxe",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC12",
@@ -105,7 +116,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC13",
@@ -114,7 +126,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC14",
@@ -123,7 +136,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC15",
@@ -132,7 +146,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC16",
@@ -141,7 +156,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC17",
@@ -150,7 +166,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC18",
@@ -159,7 +176,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "No",
-    "comments": "multiplayer"
+    "comments": "multiplayer",
+    "url": ""
   },
   {
     "id": "AHC19",
@@ -168,7 +186,8 @@
     "type": "Deluxe",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC20",
@@ -177,7 +196,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC21",
@@ -186,7 +206,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC22",
@@ -195,7 +216,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC23",
@@ -204,7 +226,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC24",
@@ -213,7 +236,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC25",
@@ -222,7 +246,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC26",
@@ -231,7 +256,8 @@
     "type": "Return To",
     "owned": "Owned",
     "played": "No",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC27",
@@ -240,7 +266,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC28",
@@ -249,7 +276,8 @@
     "type": "Return To",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC29",
@@ -258,7 +286,8 @@
     "type": "Deluxe",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC30",
@@ -267,7 +296,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC31",
@@ -276,7 +306,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC32",
@@ -285,7 +316,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC33",
@@ -294,7 +326,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC34",
@@ -303,7 +336,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC35",
@@ -312,7 +346,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC36",
@@ -321,7 +356,8 @@
     "type": "Return To",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC37",
@@ -330,7 +366,8 @@
     "type": "Deluxe",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC38",
@@ -339,7 +376,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/murder-excelsior-hotel/"
   },
   {
     "id": "AHC39",
@@ -348,7 +386,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC40",
@@ -357,7 +396,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC41",
@@ -366,7 +406,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC42",
@@ -375,7 +416,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC43",
@@ -384,7 +426,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC44",
@@ -393,7 +436,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC45",
@@ -402,7 +446,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/blob-ate-everything/"
   },
   {
     "id": "AHC46",
@@ -411,7 +456,8 @@
     "type": "Return To",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC47",
@@ -420,7 +466,8 @@
     "type": "Starter Deck",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/nathaniel-cho-investigator-starter-deck/"
   },
   {
     "id": "AHC48",
@@ -429,7 +476,8 @@
     "type": "Starter Deck",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/harvey-walters-investigator-starter-deck/"
   },
   {
     "id": "AHC49",
@@ -438,7 +486,8 @@
     "type": "Starter Deck",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/winifred-habbamock-investigator-starter-deck/"
   },
   {
     "id": "AHC50",
@@ -447,7 +496,8 @@
     "type": "Starter Deck",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/jacqueline-fine-investigator-starter-deck/"
   },
   {
     "id": "AHC51",
@@ -456,7 +506,8 @@
     "type": "Starter Deck",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/stella-clark-investigator-starter-deck/"
   },
   {
     "id": "AHC52",
@@ -465,7 +516,8 @@
     "type": "Deluxe",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC53",
@@ -474,7 +526,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC54",
@@ -483,7 +536,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC55",
@@ -492,7 +546,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC56",
@@ -501,7 +556,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "Played",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC57",
@@ -510,7 +566,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC58",
@@ -519,7 +576,8 @@
     "type": "Mythos Pack",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC59",
@@ -528,7 +586,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/war-outer-gods/"
   },
   {
     "id": "AHC60",
@@ -537,7 +596,8 @@
     "type": "Core",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/arkham-horror-card-game-revised-core-set/"
   },
   {
     "id": "AHC61",
@@ -546,7 +606,8 @@
     "type": "Return To",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC62",
@@ -555,7 +616,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC63",
@@ -564,7 +626,8 @@
     "type": "Investigator Expansion",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC64",
@@ -573,7 +636,8 @@
     "type": "Campaign Expansion",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/edge-earth-campaign-expansion/"
   },
   {
     "id": "AHC65",
@@ -582,7 +646,8 @@
     "type": "Investigator Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC66",
@@ -591,7 +656,8 @@
     "type": "Campaign Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/dunwich-legacy-campaign-expansion/"
   },
   {
     "id": "AHC67",
@@ -600,7 +666,8 @@
     "type": "Investigator Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC68",
@@ -609,7 +676,8 @@
     "type": "Campaign Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/path-carcosa-campaign-expansion/"
   },
   {
     "id": "AHC69",
@@ -618,7 +686,8 @@
     "type": "Investigator Expansion",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC70",
@@ -627,7 +696,8 @@
     "type": "Campaign Expansion",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/scarlet-keys-campaign-expansion/"
   },
   {
     "id": "AHC71",
@@ -636,7 +706,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/fortune-and-folly/"
   },
   {
     "id": "AHC72",
@@ -645,7 +716,8 @@
     "type": "Investigator Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC73",
@@ -654,7 +726,8 @@
     "type": "Campaign Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC74",
@@ -663,7 +736,8 @@
     "type": "Investigator Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC75",
@@ -672,7 +746,8 @@
     "type": "Campaign Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC76",
@@ -681,7 +756,8 @@
     "type": "Investigator Expansion",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC77",
@@ -690,7 +766,8 @@
     "type": "Investigator Expansion",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC78",
@@ -699,7 +776,8 @@
     "type": "Investigator Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC79",
@@ -708,7 +786,8 @@
     "type": "Campaign Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC80",
@@ -717,7 +796,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC81",
@@ -726,7 +806,8 @@
     "type": "Investigator Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC82",
@@ -735,7 +816,8 @@
     "type": "Campaign Expansion",
     "owned": "Don't care",
     "played": "",
-    "comments": "reedition of already owned"
+    "comments": "reedition of already owned",
+    "url": ""
   },
   {
     "id": "AHC83",
@@ -744,7 +826,8 @@
     "type": "Investigator Expansion",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC84",
@@ -753,7 +836,8 @@
     "type": "Campaign Expansion",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/drowned-city-campaign-expansion/"
   },
   {
     "id": "AHC85",
@@ -762,7 +846,8 @@
     "type": "Standalone",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/film-fatale-standalone-scenario/"
   },
   {
     "id": "AHC100",
@@ -771,7 +856,8 @@
     "type": "Core",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/arkham-horror-card-game-core-set/"
   },
   {
     "id": "AHC101",
@@ -780,7 +866,8 @@
     "type": "Investigator Deck",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC102",
@@ -789,7 +876,8 @@
     "type": "Investigator Deck",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC103",
@@ -798,7 +886,8 @@
     "type": "Investigator Deck",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC104",
@@ -807,7 +896,8 @@
     "type": "Investigator Deck",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "AHC105",
@@ -816,7 +906,8 @@
     "type": "Investigator Deck",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "NAH10",
@@ -825,7 +916,8 @@
     "type": "Novella",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "NAH11",
@@ -834,7 +926,8 @@
     "type": "Novella",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "NAH12",
@@ -843,7 +936,8 @@
     "type": "Novella",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "NAH13",
@@ -852,7 +946,8 @@
     "type": "Novella",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "NAH14",
@@ -861,7 +956,8 @@
     "type": "Novella",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "NAH15",
@@ -870,7 +966,8 @@
     "type": "Novella",
     "owned": "Owned",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   },
   {
     "id": "NAH16",
@@ -879,6 +976,7 @@
     "type": "Novella",
     "owned": "Preordered",
     "played": "",
-    "comments": ""
+    "comments": "",
+    "url": ""
   }
 ]
