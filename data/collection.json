@@ -1002,15 +1002,15 @@
     "scenarios": [
       {
         "name": "The Gathering",
-        "played": false
+        "played": true
       },
       {
         "name": "The Midnight Masks",
-        "played": false
+        "played": true
       },
       {
         "name": "The Devourer Below",
-        "played": false
+        "played": true
       }
     ]
   },
@@ -1666,25 +1666,25 @@
   },
   {
     "id": "AHC100",
-    "title": "Arkham Horror: The Card Game Core Set",
+    "title": "Arkham Horror: The Card Game Core Set (2026)",
     "cycle": "Core",
     "type": "Core",
     "owned": "Owned",
     "played": "",
     "comments": "",
-    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/arkham-horror-the-card-game-core-set/",
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/arkham-horror-card-game-core-set/",
     "scenarioCount": 3,
     "scenarios": [
       {
-        "name": "The Gathering",
+        "name": "Spreading Flames",
         "played": false
       },
       {
-        "name": "The Midnight Masks",
+        "name": "Smoke and Mirrors",
         "played": false
       },
       {
-        "name": "The Devourer Below",
+        "name": "Queen of Ash",
         "played": false
       }
     ]
