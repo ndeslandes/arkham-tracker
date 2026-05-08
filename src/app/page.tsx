@@ -23,7 +23,7 @@ interface Product {
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const [hideDisregarded, setHideDisregarded] = useState(false);
+  const [hideDisregarded, setHideDisregarded] = useState(true);
   const [collapsedCycles, setCollapsedCycles] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
