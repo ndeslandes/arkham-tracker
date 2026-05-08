@@ -30,7 +30,6 @@ export default function Home() {
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
-          // Synchronize scenario 'played' status across all products on load
           const playedScenarios = new Set<string>();
           data.forEach((p: Product) => {
             p.scenarios?.forEach(s => {
@@ -48,7 +47,6 @@ export default function Home() {
 
           setProducts(synchronizedData);
           
-          // Auto-collapse completed cycles
           const initialCollapsed: Record<string, boolean> = {};
           const cycles = Array.from(new Set(synchronizedData.map((p: Product) => p.cycle)));
           
@@ -87,8 +85,6 @@ export default function Home() {
     if (!product) return;
 
     const updatedProduct = { ...product, ...updates };
-    
-    // Optimistic update
     setProducts(prev => prev.map(p => p.id === id ? updatedProduct : p));
 
     try {
@@ -100,7 +96,6 @@ export default function Home() {
       if (!res.ok) throw new Error('Failed to update');
     } catch (error) {
       console.error('Error updating product:', error);
-      // Revert on error
       setProducts(prev => prev.map(p => p.id === id ? product : p));
     }
   };
@@ -116,9 +111,7 @@ export default function Home() {
     );
   }
 
-  // Unique scenarios calculation (Count every unique scenario once per cycle)
   const uniqueScenariosMap = new Map<string, { played: boolean }>();
-  
   products.forEach(p => {
     p.scenarios.forEach(s => {
       const key = `${p.cycle}|${s.name}`;
@@ -239,10 +232,24 @@ export default function Home() {
             );
             const isCollapsed = collapsedCycles[cycle];
 
-            const investigatorExpansions = cycleProducts.filter(p => p.type === 'Investigator Expansion');
-            const campaignExpansions = cycleProducts.filter(p => p.type === 'Campaign Expansion');
-            const legacyProducts = cycleProducts.filter(p => p.type === 'Deluxe' || p.type === 'Mythos Pack');
-            const otherProducts = cycleProducts.filter(p => !['Investigator Expansion', 'Campaign Expansion', 'Deluxe', 'Mythos Pack'].includes(p.type));
+            // Core Merge Logic
+            let investigatorExpansions = cycleProducts.filter(p => p.type === 'Investigator Expansion');
+            let campaignExpansions = cycleProducts.filter(p => p.type === 'Campaign Expansion');
+            let legacyProducts = cycleProducts.filter(p => p.type === 'Deluxe' || p.type === 'Mythos Pack');
+            let otherProducts = cycleProducts.filter(p => !['Investigator Expansion', 'Campaign Expansion', 'Deluxe', 'Mythos Pack'].includes(p.type));
+
+            // Special handling for Core to merge AHC01 into AHC60
+            if (cycle === 'Core') {
+              const revisedCore = cycleProducts.find(p => p.id === 'AHC60');
+              const originalCore = cycleProducts.find(p => p.id === 'AHC01');
+              const newCore = cycleProducts.find(p => p.id === 'AHC100');
+
+              if (revisedCore) {
+                investigatorExpansions = [revisedCore];
+                if (originalCore) legacyProducts = [originalCore];
+                otherProducts = otherProducts.filter(p => p.id !== 'AHC60' && p.id !== 'AHC01');
+              }
+            }
 
             const showLegacyAsSubItems = (campaignExpansions.length > 0 || investigatorExpansions.length > 0) && legacyProducts.length > 0;
             const attachLegacyToId = campaignExpansions[0]?.id || investigatorExpansions[0]?.id;
