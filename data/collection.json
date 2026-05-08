@@ -1416,15 +1416,48 @@
   },
   {
     "id": "AHC77",
-    "title": "The Feast of Hemlock Investigator Expansion",
+    "title": "The Feast of Hemlock Vale Campaign Expansion",
     "cycle": "Hemlock Vale",
-    "type": "Investigator Expansion",
+    "type": "Campaign Expansion",
     "owned": "Owned",
     "played": "No",
     "comments": "",
-    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/feast-hemlock-vale-investigator-expansion/",
-    "scenarioCount": 0,
-    "scenarios": []
+    "url": "https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/feast-hemlock-vale-campaign-expansion/",
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "name": "The First Day",
+        "played": false
+      },
+      {
+        "name": "The First Night",
+        "played": false
+      },
+      {
+        "name": "The Second Day",
+        "played": false
+      },
+      {
+        "name": "The Second Night",
+        "played": false
+      },
+      {
+        "name": "The Third Day",
+        "played": false
+      },
+      {
+        "name": "The Third Night",
+        "played": false
+      },
+      {
+        "name": "The Fate of Hemlock Vale",
+        "played": false
+      },
+      {
+        "name": "Scenario 8",
+        "played": false
+      }
+    ]
   },
   {
     "id": "AHC78",
