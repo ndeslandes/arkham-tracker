@@ -375,17 +375,7 @@ export default function Home() {
                             <label className="text-[9px] font-typewriter uppercase font-bold text-slate-600 mb-3 block tracking-[0.2em]">Scenarios</label>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                               {product.scenarios.map((scenario, idx) => {
-                                // Get index of this scenario in the unique list for this cycle to show consistent numbering
-                                const cycleScenarios = products
-                                  .filter(p => p.cycle === product.cycle)
-                                  .flatMap(p => p.scenarios);
-                                const uniqueNames = Array.from(new Set(cycleScenarios.map(s => s.name)));
-                                
-                                // For standalones, numbering should reset per product. 
-                                // For campaigns, it stays cycle-wide (1-8+)
-                                const displayNum = product.cycle === 'Standalones' 
-                                  ? idx + 1 
-                                  : uniqueNames.indexOf(scenario.name) + 1;
+                                const displayNum = idx + 1;
 
                                 return (
                                   <div 
