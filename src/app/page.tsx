@@ -162,8 +162,12 @@ export default function Home() {
 
   const filteredProducts = products.filter(p => !hideDisregarded || p.owned !== "Don't care");
   const cycles = Array.from(new Set(filteredProducts.map(p => p.cycle))).sort((a, b) => {
-    if (a === 'Investigator Starter Decks') return 1;
-    if (b === 'Investigator Starter Decks') return -1;
+    const bottomCycles = ['Standalones', 'Investigator Starter Decks'];
+    if (bottomCycles.includes(a) && !bottomCycles.includes(b)) return 1;
+    if (!bottomCycles.includes(a) && bottomCycles.includes(b)) return -1;
+    if (bottomCycles.includes(a) && bottomCycles.includes(b)) {
+      return bottomCycles.indexOf(a) - bottomCycles.indexOf(b);
+    }
     return 0; // Maintain relative order for others
   });
 
@@ -231,10 +235,20 @@ export default function Home() {
             const isCollapsed = collapsedCycles[cycle];
 
             return (
-              <section key={cycle} className="scroll-mt-48">
+              <section key={cycle} className="scroll-mt-48 relative">
+                {/* Completed Stamp */}
+                {allPlayed && (
+                  <div className="absolute -top-6 -right-4 pointer-events-none z-20 opacity-40 mix-blend-screen -rotate-12 border-4 border-emerald-900/50 p-2 rounded-lg">
+                    <div className="border-2 border-emerald-900/30 px-4 py-1 flex flex-col items-center">
+                      <span className="font-typewriter font-bold text-emerald-500 text-[10px] tracking-[0.2em] uppercase leading-none mb-1">Investigation</span>
+                      <span className="font-typewriter font-bold text-emerald-400 text-xl tracking-[0.1em] uppercase leading-none">Archived</span>
+                    </div>
+                  </div>
+                )}
+
                 <div 
                   onClick={() => toggleCycleCollapse(cycle)}
-                  className="flex items-center gap-4 mb-8 cursor-pointer group select-none"
+                  className="flex items-center gap-4 mb-8 cursor-pointer group select-none relative z-10"
                 >
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-eldritch to-transparent"></div>
                   <div className="flex flex-col items-center gap-1 px-4">
@@ -246,15 +260,10 @@ export default function Home() {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
-                      <h2 className="text-2xl font-typewriter font-bold text-slate-300 uppercase tracking-widest group-hover:text-white transition-colors">
+                      <h2 className="text-2xl font-typewriter font-bold text-slate-300 uppercase tracking-widest group-hover:text-white transition-colors text-center">
                         {cycle}
                       </h2>
                     </div>
-                    {allPlayed && (
-                      <span className="text-[9px] font-typewriter font-bold text-emerald-500/60 uppercase tracking-[0.3em] animate-pulse">
-                        Case Closed
-                      </span>
-                    )}
                   </div>
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-eldritch to-transparent"></div>
                 </div>
